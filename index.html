@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Путь развития навыков в AI — интерактивная лестница</title>
+<meta name="description" content="Десять уровней развития навыков работы с AI. Наведите на ступень, чтобы прочитать описание.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230047ff'/%3E%3Cpath d='M6 25v-5h7v-6h7V7h7v18Z' fill='white'/%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light;font-family:Arial,Helvetica,sans-serif;color:#061440;background:#edf5ff;--blue:#0047ff;--navy:#061440}
+*{box-sizing:border-box}body{margin:0;min-width:320px}button{font:inherit}button:focus-visible{outline:3px solid #0047ff;outline-offset:4px}
+.toolbar{max-width:1920px;margin:auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:16px;color:#244174}.toolbar p{margin:0}.toolbar .key{font-size:14px;color:#3a5379}
+.stage{position:relative;max-width:1920px;margin:0 auto;isolation:isolate;background:#e9f5ff;box-shadow:0 12px 60px #10347412}.stage>img{display:block;width:100%;height:auto}.zones{position:absolute;inset:0}
+.zone{position:absolute;appearance:none;padding:0;background:transparent;border:2px solid transparent;border-radius:15px;cursor:pointer;transition:background .2s,border-color .2s,box-shadow .2s;touch-action:manipulation}
+.zone.active,.zone:focus-visible{background:#ffffff13;border-color:#ff8a24;box-shadow:0 0 0 3px #ffffffb0,0 0 22px #0066ff3d;outline:none;z-index:2}
+.zone.active:after{content:"";position:absolute;inset:-1px;border-radius:13px;box-shadow:inset 0 0 13px #ffffff80;pointer-events:none}
+.popover{position:absolute;width:clamp(440px,44vw,640px);max-width:calc(100% - 32px);overflow-y:auto;z-index:5;padding:26px 28px 28px;border:1px solid #a8caff;border-radius:22px;background:linear-gradient(145deg,#fff 12%,#eef7ff 100%);box-shadow:0 22px 65px #07296740,0 0 0 4px #ffffffa6,inset 0 1px 0 #fff;color:var(--navy);transition:opacity .24s ease,transform .28s cubic-bezier(.2,.8,.2,1),visibility .24s;opacity:0;visibility:hidden;transform:translateY(16px);pointer-events:none}
+.popover.visible{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}.eyebrow{display:flex;align-items:center;gap:12px;padding-right:20px;margin-bottom:16px;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:#28558c;font-weight:700}.level-number{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:12px;color:white;background:linear-gradient(140deg,#1688ff,#0039e6);box-shadow:inset 0 0 0 1px #fff8,0 4px 10px #0047ff30;font-size:24px;letter-spacing:0}.popover h2{font-size:clamp(20px,1.7vw,30px);line-height:1.17;margin:0 0 11px;letter-spacing:-.025em;overflow-wrap:anywhere}.subtitle{font-size:17px;line-height:1.4;margin:0 0 18px;color:#34547c}.popover ul{margin:0;padding:0;list-style:none;display:grid;gap:12px;font-size:18px;line-height:1.38}.popover li{position:relative;padding-left:18px}.popover li:before{content:"";position:absolute;left:0;top:.52em;width:6px;height:6px;border-radius:50%;background:var(--blue)}.close{position:absolute;top:12px;right:12px;width:36px;height:36px;border:0;background:transparent;color:#426189;border-radius:50%;font-size:27px;cursor:pointer}.close:hover{background:#dfeeff}.pin-hint{margin:20px 0 0;padding-top:14px;border-top:1px solid #d1e3f7;color:#45638a;font-size:14px}.popover.pinned{border-color:#ff9d48}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.mobile{display:none}.footer{padding:18px 24px;text-align:center;font-size:14px;color:#466084}
+@media(min-width:901px){.zone{min-height:30px}}
+@media(max-width:900px){.toolbar{padding:16px 18px}.toolbar .key{display:none}.stage{margin:0 12px;border-radius:14px;overflow:hidden}.zones,.popover{display:none}.mobile{display:block;padding:22px 16px 36px;max-width:740px;margin:auto}.mobile>h1{font-size:25px;line-height:1.16;margin:0 0 18px;letter-spacing:-.03em}.mobile details{margin:10px 0;border:1px solid #adccf2;border-radius:16px;background:linear-gradient(140deg,#fff,#edf6ff);box-shadow:0 5px 16px #00379108;overflow:hidden}.mobile summary{display:flex;align-items:center;gap:12px;list-style:none;padding:14px;cursor:pointer;min-height:64px;line-height:1.3;font-size:16px;font-weight:700}.mobile summary::-webkit-details-marker{display:none}.mobile summary .number{width:38px;height:38px;flex-shrink:0;display:grid;place-items:center;border-radius:10px;color:#fff;background:#0047ff;font-size:23px}.mobile summary .name{flex:1}.mobile summary:after{content:"+";font-size:25px;color:#0047ff}.mobile details[open]{border-color:#005aff}.mobile details[open] summary:after{content:"−"}.mobile .description{padding:0 18px 20px 64px;animation:reveal .24s ease}.mobile .description p{line-height:1.45;font-size:16px;margin:0 0 12px;color:#34547c}.mobile ul{padding-left:18px;margin:0;display:grid;gap:10px;font-size:16px;line-height:1.45}.footer{display:none}}
+@keyframes reveal{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="toolbar"><p>Наведите на ступень, чтобы открыть описание</p><span class="key">Нажатие — закрепить · Esc — закрыть</span></header>
+<main>
+<section class="stage" aria-label="Лестница развития навыков в AI">
+<img src="staircase.png" width="3840" height="2160" alt="Путь развития навыков в AI: десять ступеней от первых запросов до стратегической AI-трансформации. Описания доступны при выборе уровня." draggable="false">
+<div class="zones" aria-label="Выберите уровень"></div>
+<article class="popover" id="level-description" aria-label="Описание уровня" aria-hidden="true">
+<button type="button" class="close" aria-label="Закрыть описание">×</button>
+<div class="eyebrow"><span class="level-number"></span><span>Уровень</span></div>
+<h2></h2><p class="subtitle"></p><ul></ul><p class="pin-hint">Нажмите на ступень, чтобы закрепить описание</p>
+</article>
+</section>
+<section class="mobile" aria-label="Уровни развития навыков"><h1>Выберите уровень</h1></section>
+<noscript><p>Для всплывающих описаний включите JavaScript в браузере. Все уровни и пояснения остаются видны на изображении.</p></noscript>
+</main>
+<footer class="footer">Все десять уровней доступны с клавиатуры: Tab — выбрать, Enter — закрепить.</footer>
+<script>
+(() => {
+'use strict';
+const levels = [
+{n:1,title:'Первые шаги',subtitle:'Учитесь обращаться к помощнику с искусственным интеллектом и использовать его ответы в простых повседневных делах.',items:['Просите объяснить непонятную тему, предложить идеи или написать черновик короткого письма.','Если ответ не подходит, задаёте дополнительный вопрос и объясняете, что нужно изменить.','Проверяете важные факты: помощник может ошибаться, даже когда его ответ звучит уверенно.'],x:10.2,y:88.7},
+{n:2,title:'Понятная постановка задачи',subtitle:'Учитесь объяснять помощнику, какой результат нужен, чтобы получать подходящий ответ с меньшим числом исправлений.',items:['Рассказываете, для кого готовите материал, зачем он нужен и какие сведения следует учесть.','Задаёте объём и вид ответа: например, короткое письмо, список действий или таблица.','Указываете, что обязательно сохранить и чего избегать, затем сверяете ответ с этими условиями.'],x:14.7,y:79.35},
+{n:3,title:'Работа с задачей по шагам',subtitle:'Учитесь вести помощника от первой идеи до готового результата, когда одного короткого запроса уже недостаточно.',items:['Делите большую задачу на части: сначала план, затем черновик, после этого проверка.','Показываете удачный пример и объясняете, что в нём нужно повторить: построение текста, тон или подробность.','Проверяете результат каждого шага и исправляете ошибки до перехода к следующему.'],x:19,y:70.05},
+{n:4,title:'Выбор подходящей программы',subtitle:'Учитесь выбирать помощника под конкретную работу: разные программы лучше справляются с разными задачами.',items:['Пробуете одну и ту же задачу в нескольких программах и сравниваете полученные результаты.','Смотрите, где ответ точнее, понятнее и требует меньше исправлений с вашей стороны.','Учитываете стоимость, время работы и то, разрешено ли загружать в программу ваши документы.'],x:22.6,y:60.6},
+{n:5,title:'Меньше повторяющейся работы',subtitle:'Настраиваете знакомую последовательность действий так, чтобы программы выполняли её без постоянного ручного участия.',items:['Находите повторяющееся дело: например, собирать ответы из заявок и готовить ежедневную сводку.','Связываете действия в цепочку: появилась заявка — сведения попали в таблицу — подготовился краткий отчёт.','Проверяете цепочку на нескольких примерах и определяете, где перед следующим действием нужно ваше подтверждение.'],x:26.6,y:51.25},
+{n:6,title:'Помощник для поручений',subtitle:'Настраиваете помощника, который может сам выбирать следующие шаги для выполнения поручения в заданных вами пределах.',items:['Описываете цель и поручаете несколько связанных действий: например, найти сведения и подготовить по ним обзор.','Указываете, какими документами и программами он может пользоваться и что должен согласовать с вами.','Проверяете итог и учите помощника останавливаться и задавать вопрос, если сведений недостаточно.'],x:30.2,y:41.9},
+{n:7,title:'Ответы по вашим документам',subtitle:'Даёте помощнику доступ к нужным материалам, чтобы он находил сведения и отвечал с опорой на них.',items:['Собираете инструкции, правила и другие документы, по которым помощник должен искать ответы.','Просите указывать источник ответа, чтобы можно было открыть документ и проверить нужное место.','Обновляете материалы и задаёте правило: если ответа в них нет, нужно прямо об этом сказать.'],x:33.6,y:32.55},
+{n:8,title:'Совместная работа помощников',subtitle:'Организуете работу нескольких помощников, когда удобнее разделить большую задачу на отдельные обязанности.',items:['Назначаете каждому своё дело: один собирает сведения, другой пишет текст, третий проверяет ошибки.','Определяете, в каком порядке они работают и что передают друг другу после каждого шага.','Следите, чтобы результаты не противоречили друг другу; окончательное решение о готовности остаётся за человеком.'],x:36.6,y:23.2},
+{n:9,title:'Решение под особую задачу',subtitle:'Вместе со специалистами дорабатываете помощника под свою работу, если готовые программы не дают нужного качества.',items:['Объясняете, с чем обычный помощник не справляется, и собираете примеры правильных ответов.','Специалисты используют эти примеры, чтобы научить программу лучше учитывать особенности ваших задач.','Проверяете качество на новых заданиях и оцениваете, оправдывают ли улучшения затраты на доработку.'],x:39.45,y:13.85},
+{n:10,title:'Изменения в работе организации',subtitle:'Помогаете всей организации применять искусственный интеллект с понятной пользой для сотрудников и общего результата.',items:['Выбираете задачи, где помощь программы может сэкономить время, уменьшить ошибки или улучшить качество работы.','Договариваетесь, кто за что отвечает, обучаете сотрудников и начинаете с небольшого участка работы.','Сравниваете результаты до и после изменений, исправляете недостатки и постепенно расширяете удачные решения.'],x:42,y:4.45}
+];
+const stage=document.querySelector('.stage'), zones=document.querySelector('.zones'), pop=document.querySelector('.popover'), mobile=document.querySelector('.mobile');
+const fine=window.matchMedia('(hover:hover) and (pointer:fine)');
+let active=null,pinned=false,closeTimer=null,opening=0,suppressFocus=false;
+const make=(tag,cls,text)=>{const el=document.createElement(tag);if(cls)el.className=cls;if(text!==undefined)el.textContent=text;return el;};
+function cancelClose(){clearTimeout(closeTimer);}
+function position(d){
+ const sw=stage.clientWidth,sh=stage.clientHeight;
+ pop.style.maxHeight=Math.max(0,sh-32)+'px';
+ const pw=pop.offsetWidth,ph=pop.offsetHeight;
+ const top=d.y*sh/100,bottom=(d.y+8.55)*sh/100,gap=-2;
+ const x=Math.max(16,sw-pw-28);
+ let y=top>sh/2?top-ph-gap:bottom+gap;
+ y=Math.max(16,Math.min(y,sh-ph-16));
+ pop.style.left=x+'px';pop.style.top=y+'px';
+}
+function show(d,button,pin=false){
+ cancelClose();
+ if(pinned&&!pin&&active!==d.n)return;
+ const changed=active!==d.n;
+ active=d.n;pinned=pin||pinned;
+ zones.querySelectorAll('.zone').forEach(b=>{const selected=b===button;b.classList.toggle('active',selected);b.setAttribute('aria-expanded',String(selected));b.setAttribute('aria-pressed',String(selected&&pinned));});
+ pop.querySelector('.level-number').textContent=d.n;
+ pop.querySelector('h2').textContent=d.title;
+ pop.querySelector('.subtitle').textContent=d.subtitle;
+ pop.querySelector('ul').replaceChildren(...d.items.map(t=>make('li','',t)));
+ pop.querySelector('.pin-hint').textContent=pinned?'Описание закреплено · Esc — закрыть':'Нажмите на ступень, чтобы закрепить описание';
+ pop.classList.toggle('pinned',pinned);pop.setAttribute('aria-hidden','false');
+ if(changed){pop.classList.remove('visible');cancelAnimationFrame(opening);position(d);opening=requestAnimationFrame(()=>pop.classList.add('visible'));}else{position(d);pop.classList.add('visible');}
+}
+function hide(){cancelClose();cancelAnimationFrame(opening);active=null;pinned=false;pop.classList.remove('visible','pinned');pop.setAttribute('aria-hidden','true');zones.querySelectorAll('.zone').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-expanded','false');b.setAttribute('aria-pressed','false');});}
+function scheduleClose(){if(!pinned)closeTimer=setTimeout(hide,180);}
+for(const d of levels){
+ const b=make('button','zone');b.type='button';b.dataset.level=d.n;b.setAttribute('aria-label','Уровень '+d.n+'. '+d.title);b.setAttribute('aria-controls','level-description');b.setAttribute('aria-expanded','false');b.setAttribute('aria-pressed','false');
+ Object.assign(b.style,{left:d.x+'%',top:d.y+'%',width:(98-d.x)+'%',height:'8.55%'});
+ b.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse'&&fine.matches)show(d,b);});b.addEventListener('pointerleave',scheduleClose);
+ b.addEventListener('focus',()=>{if(suppressFocus){suppressFocus=false;return;}if(!pinned)show(d,b);});b.addEventListener('blur',scheduleClose);
+ b.addEventListener('click',()=>{if(active===d.n&&pinned)hide();else{pinned=false;show(d,b,true);}});zones.append(b);
+ const detail=make('details',''),summary=make('summary','');summary.append(make('span','number',String(d.n)),make('span','name',d.title));
+ const desc=make('div','description');const list=make('ul','');list.append(...d.items.map(t=>make('li','',t)));desc.append(make('p','',d.subtitle),list);detail.append(summary,desc);mobile.append(detail);
+ detail.addEventListener('toggle',()=>{if(detail.open)mobile.querySelectorAll('details').forEach(other=>{if(other!==detail)other.open=false;});});
+}
+pop.addEventListener('pointerenter',cancelClose);pop.addEventListener('pointerleave',scheduleClose);pop.addEventListener('focusin',cancelClose);pop.addEventListener('focusout',scheduleClose);
+pop.querySelector('.close').addEventListener('click',hide);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){const b=zones.querySelector('.active');const returnFocus=document.activeElement.closest('.popover');hide();if(b&&returnFocus){suppressFocus=true;b.focus();}}});
+document.addEventListener('pointerdown',e=>{if(!e.target.closest('.popover,.zone'))hide();});
+window.addEventListener('resize',()=>{if(innerWidth<=900)hide();else if(active)position(levels.find(d=>d.n===active));});
+stage.querySelector('img').addEventListener('load',()=>{if(active)position(levels.find(d=>d.n===active));});
+if(innerWidth<=900)document.querySelector('.toolbar p').textContent='Нажмите на уровень, чтобы открыть описание';
+})();
+</script>
+</body>
+</html>
